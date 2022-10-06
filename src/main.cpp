@@ -43,6 +43,7 @@ char CH_NAME[] = "LMS-tech.ru";
 
 Adafruit_ILI9341 tft = Adafruit_ILI9341(TFT_CS, TFT_DC, TFT_RESET);
 GfxUi ui = GfxUi(&tft);
+
 WiFiClientSecure client;
 YoutubeApi api(API_KEY, client);
 //YoutubeApi *api;
@@ -50,11 +51,11 @@ YoutubeApi api(API_KEY, client);
 #define API_REQUEST_FIRST 6000
 #define API_REQUEST_CONTINUE 300000
 int api_mtbs = API_REQUEST_FIRST; //mean time between api requests
-long api_lasttime;   //last time api request has been done
-long cnt_lasttime;   //last time print has been done
+unsigned long api_lasttime;   //last time api request has been done
+unsigned long cnt_lasttime;   //last time print has been done
 
-long subs;
-long views;
+unsigned long subs;
+unsigned long views;
 bool ytc_setup = false;
 
 long view_stat[60];

@@ -103,7 +103,7 @@ void GfxUi::drawBmp(String filename, uint8_t x, uint16_t y) {
   Serial.println('\'');
 
   // Open requested file on SD card
-  if ((bmpFile = SPIFFS.open(filename, "r")) == NULL) {
+  if (!(bmpFile = SPIFFS.open(filename, "r"))) {
     Serial.print(F("File not found"));
     return;
   }

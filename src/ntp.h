@@ -1,4 +1,4 @@
-#include "time.h"
+#include <time.h>
 #include <TimeLib.h>
 #include <NtpClientLib.h>
 
@@ -55,7 +55,8 @@ String convertMon(int n) {
     case 9: return F("Sen");
     case 10: return F("Okt");
     case 11: return F("Nov");
-    case 12: return F("Dec"); 
+    case 12: return F("Dec");
+    default: return F("???"); 
   }
 }
 
@@ -68,6 +69,7 @@ String convertWeek(int n) {
     case 6: return F("Friday");
     case 7: return F("Saturday");
     case 1: return F("Sunday");
+    default: return F("My_day");
   }
 }
 
