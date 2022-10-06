@@ -4,8 +4,8 @@
 
 #define NTP_PAUSE_FIRST 9000
 #define NTP_PAUSE_CONTINUE 1500000
-long ntp_timer = NTP_PAUSE_FIRST; 
-long ntp_lasttime;   //last time print has been done
+unsigned long ntp_timer = NTP_PAUSE_FIRST; 
+unsigned long ntp_lasttime;   //last time print has been done
 
 bool get_ip;
 bool time_start = false;
